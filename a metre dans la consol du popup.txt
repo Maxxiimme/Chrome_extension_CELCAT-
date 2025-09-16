@@ -1,0 +1,19 @@
+// Liste par défaut des codes INR → noms de cours
+const listeParDefaut = {
+    "INR101": "Initiation au développement",
+    "INR102": "Développement d'interfaces web",
+    "INR103": "Introduction à l'architecture des ordinateurs",
+    "INR104": "Introduction aux systèmes d'exploitation et à leur fonctionnement",
+    "INR105": "Introduction aux bases de données et SQL",
+    "INR106": "Mathématiques discrètes",
+    "INR107": "Outils mathématiques fondamentaux",
+    "INR108": "Introduction aux bases de données et SQL",
+    "INR109": "Economie durable et numérique",
+    "INR110": "ANGLAIS",
+    "INR111": "Communication"
+};
+
+// Enregistrer dans chrome.storage.local
+chrome.storage.local.set({ remplacements: listeParDefaut }, () => {
+    console.log("✅ Liste des remplacements initialisée avec succès !");
+});

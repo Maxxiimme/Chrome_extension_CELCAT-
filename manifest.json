@@ -1,13 +1,17 @@
 {
   "manifest_version": 3,
   "name": "Remplaceur INR → Nom du cours (IUT complet)",
-  "version": "1.2",
-  "description": "Remplace les codes INR par les noms de cours correspondants sur le site EDT de l'IUT.",
+  "version": "1.5",
+  "description": "Remplace automatiquement les codes INR par les noms de cours, modifiable depuis l'UI de l'extension.",
+  "action": {
+    "default_popup": "popup.html"
+  },
   "content_scripts": [
     {
       "matches": ["https://edt.iut-tlse3.fr/*"],
       "js": ["content.js"],
       "run_at": "document_end"
     }
-  ]
+  ],
+  "permissions": ["storage"]
 }
